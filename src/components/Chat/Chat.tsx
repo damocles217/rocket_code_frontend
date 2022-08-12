@@ -1,11 +1,13 @@
-import React, { ComponentType } from 'react';
+import React, { ComponentType, useState } from 'react';
+import Name from '../Name/Name';
 import style from './sass/Chat.module.scss';
 
 const Chat: ComponentType = () => {
+  const [form, setForm] = useState();
   return (
-    <main data-testid="main" className={style.main}>
-      <div>Hi</div>
-    </main>
+    <form data-testid="main" className={style.main}>
+      <Name />
+    </form>
   );
 };
 

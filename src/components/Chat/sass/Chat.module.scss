@@ -5,11 +5,11 @@
   @extend .main-obj;
 
   @include screenTablet {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   @include screenLap {
     width: 40%;
-    height: 80vh;
+    min-height: 80vh;
   }
 }
