@@ -1,10 +1,22 @@
 @import './objects/objects.scss';
+@import './settings/mixin.scss';
 @import './settings/palette.scss';
 @import './settings/fonts.scss';
 
 .header {
   background-color: $header-bg;
   @extend .header-obj;
+  @include screenTablet {
+    min-height: 30vh;
+  }
+
+  @include screenLap {
+    width: 40%;
+    min-height: 10vh;
+    &__title {
+      font-size: $title-size-lap;
+    }
+  }
 
   &__title {
     color: $header-color;
@@ -14,17 +26,20 @@
   &__img {
     @extend .img-obj;
     img {
-      width: 50%;
-      aspect-ratio: 1;
+      width: 4rem;
     }
   }
 }
 .subtitle {
   @extend .subtitle-obj;
   font-size: $subtitle-size;
+
+  @include screenLap {
+    font-size: $subtitle-size-lap;
+  }
+
   &__img {
-    margin-right: 2%;
-    width: 1rem;
+    @extend .img-subtitle-obj;
     img {
       width: 100%;
       height: 100%;
