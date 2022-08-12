@@ -7,12 +7,12 @@
   background-color: $header-bg;
   @extend .header-obj;
   @include screenTablet {
-    min-height: 30vh;
+    height: 30vh;
   }
 
   @include screenLap {
     width: 40%;
-    min-height: 10vh;
+    height: 20vh;
     &__title {
       font-size: $title-size-lap;
     }

@@ -1,0 +1,28 @@
+@import './objects/objects.scss';
+@import './settings/palette.scss';
+
+.name {
+  @extend .name-obj;
+  &__img {
+    border: solid 4px $profile-border;
+    @extend .img-obj;
+  }
+
+  &__form {
+    background-color: $form-bg;
+    input {
+      background-color: $input-bg;
+      border: solid 1px $input-border;
+    }
+    input::placeholder {
+      color: black;
+    }
+
+    @extend .form-obj;
+  }
+}
+
+.final {
+  @extend .name-obj;
+  background-color: $form-bg;
+}
