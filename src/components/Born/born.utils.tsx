@@ -8,16 +8,23 @@ export const pressEnterKey = (
   setCheck: Dispatch<SetStateAction<Array<MessageType>>>,
   check: Array<MessageType>,
 ) => {
-  if (e.key == 'Enter' && form.name && form.lastname && check.length == 0) {
-    const message = `${form.name} ${form.secondName} ${form.lastname} ${form.secondLastname}`;
+  if (
+    e.key == 'Enter' &&
+    form.year &&
+    form.day &&
+    form.mounth &&
+    check.length == 2
+  ) {
+    const bornString = `${form.day} ${form.mounth} ${form.year}`;
+
     setCheck(prev => [
       ...prev,
       {
-        message: message,
+        message: bornString,
         owner: 'user',
       },
       {
-        message: 'born',
+        message: 'contact',
         owner: 'company',
       },
     ]);

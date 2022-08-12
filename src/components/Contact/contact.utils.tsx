@@ -8,8 +8,10 @@ export const pressEnterKey = (
   setCheck: Dispatch<SetStateAction<Array<MessageType>>>,
   check: Array<MessageType>,
 ) => {
-  if (e.key == 'Enter' && form.name && form.lastname && check.length == 0) {
-    const message = `${form.name} ${form.secondName} ${form.lastname} ${form.secondLastname}`;
+  if (e.key == 'Enter' && form.email && form.phone && check.length == 4) {
+    e.preventDefault();
+    const message = `Correo Electronico: ${form.email}\n
+Celular:${form.phone}`;
     setCheck(prev => [
       ...prev,
       {
@@ -17,7 +19,7 @@ export const pressEnterKey = (
         owner: 'user',
       },
       {
-        message: 'born',
+        message: 'final',
         owner: 'company',
       },
     ]);

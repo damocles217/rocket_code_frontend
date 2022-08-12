@@ -6,7 +6,9 @@ export interface FormType {
   secondName?: string;
   lastname: string;
   secondLastname?: string;
-  bornDate: string;
+  day: string;
+  mounth: string;
+  year: string;
   email: string;
   phone: string;
 }
@@ -16,4 +18,18 @@ export interface NameProps {
   setForm: Dispatch<SetStateAction<FormType>>;
   setCheck: Dispatch<SetStateAction<Array<MessageType>>>;
   check: Array<MessageType>;
+}
+
+export interface SendForm {
+  name: string;
+  secondName?: string;
+  lastname: string;
+  secondLastname?: string;
+  bornDate: string;
+  email: string;
+  phone: string;
+}
+
+export interface ReceivedForm extends SendForm {
+  id: number;
 }

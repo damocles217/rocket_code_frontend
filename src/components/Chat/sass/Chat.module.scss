@@ -1,5 +1,6 @@
 @import './objects/objects.scss';
 @import './settings/mixin.scss';
+@import './settings/palette.scss';
 
 .main {
   @extend .main-obj;
@@ -12,4 +13,11 @@
     width: 40%;
     min-height: 80vh;
   }
+}
+.send {
+  background-color: $send-bg;
+  color: $send-color;
+  font-size: 1.4em;
+
+  @extend .send-obj;
 }

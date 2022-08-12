@@ -1,8 +1,9 @@
 import React, { ComponentType } from 'react';
 import { NameProps } from '../../../types/form';
 import profile from '../../assets/images/profile.jpeg';
-import { handleChange, pressEnterKey } from './name.utils';
-import style from './sass/Name.module.scss';
+import { pressEnterKey } from './name.utils';
+import { handleChange } from '../utils/name.utils';
+import style from '../sass/Messages.module.scss';
 
 const Name: ComponentType<NameProps> = ({
   form,
@@ -18,6 +19,7 @@ const Name: ComponentType<NameProps> = ({
       <div
         onKeyDown={e => pressEnterKey(e, form, setCheck, check)}
         className={style.name__form}
+        data-testid="name-container"
       >
         <h3>¿Cuál es tu nombre?</h3>
         <input

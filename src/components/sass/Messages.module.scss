@@ -21,3 +21,8 @@
     @extend .form-obj;
   }
 }
+
+.final {
+  @extend .name-obj;
+  background-color: $form-bg;
+}

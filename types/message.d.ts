@@ -1,4 +1,4 @@
 export interface MessageType {
-  message: { [key: string]: any };
+  message: string;
   owner: string;
 }
