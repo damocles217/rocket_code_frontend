@@ -19,7 +19,7 @@ export const handleSubmit = async (
       phone: form.phone,
     };
 
-    const response = await fetch('http://192.168.1.67:3000/user', {
+    const response = await fetch('http://localhost:3000/user', {
       method: 'POST',
       credentials: 'include',
       headers: {
