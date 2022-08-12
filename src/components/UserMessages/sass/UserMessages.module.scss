@@ -1,0 +1,23 @@
+@import './objects/objects.scss';
+@import './settings/palette.scss';
+@import './settings/mixin.scss';
+
+.message {
+  text-align: end;
+  background-color: $message-bg;
+  @extend .message-obj;
+  @include screenTabletLand {
+    font-size: 1.2em;
+    padding: 2%;
+  }
+}
+
+.messageProps {
+  width: 100%;
+  height: 15vh;
+  background-color: $message-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

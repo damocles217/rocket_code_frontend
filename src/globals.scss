@@ -1,0 +1,9 @@
+body > div[id='root'] {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  scroll-behavior: smooth;
+}

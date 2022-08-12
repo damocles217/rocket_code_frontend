@@ -1,0 +1,17 @@
+.main-obj {
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.send-obj {
+  width: 50%;
+  height: 10vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  align-self: center;
+  border: none;
+  padding: 2%;
+}

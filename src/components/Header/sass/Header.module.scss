@@ -1,0 +1,53 @@
+@import './objects/objects.scss';
+@import './settings/mixin.scss';
+@import './settings/palette.scss';
+@import './settings/fonts.scss';
+
+.header {
+  background-color: $header-bg;
+  @extend .header-obj;
+  @include screenTablet {
+    height: 30vh;
+  }
+
+  @include screenLap {
+    width: 40%;
+    height: 20vh;
+    &__title {
+      font-size: $title-size-lap;
+    }
+  }
+
+  &__title {
+    color: $header-color;
+    @extend .title-obj;
+  }
+
+  &__img {
+    @extend .img-obj;
+    img {
+      width: 4rem;
+    }
+  }
+}
+.subtitle {
+  @extend .subtitle-obj;
+  font-size: $subtitle-size;
+
+  @include screenLap {
+    font-size: $subtitle-size-lap;
+  }
+
+  &__img {
+    @extend .img-subtitle-obj;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.title {
+  margin-left: 10%;
+  font-weight: 900;
+}
